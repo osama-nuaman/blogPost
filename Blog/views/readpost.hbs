@@ -1,0 +1,70 @@
+<ul class="nav justify-content-center mb-5">
+      <li class="nav-item">
+        <a class="nav-link active" href="/">Home</a>
+      </li>
+      
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+      </li>
+   </ul>
+
+<div class="card border-0 p-5  mb-3 rounded-0" style="max-width: 100%;">
+  <div class="card-body mainColor">
+    <h3 class="card-title text-center font-weight-bold">
+      {{post.title}}
+    </h3>
+    <p class="text-center card-text">
+      {{post.content}}
+    </p>
+  </div>
+</div>
+<div class="addcomment bg-light mt-5">
+  <h4 class="mb-3 font-weight-bold">
+    Add Comment
+  </h4>
+  <!-- Comment form-->
+  <form class="mb-4" method="post" action="/addcomment">
+    <input type="text" name="username" placeholder="Enter Your Name" />
+    <input type="hidden" value="{{post._id}}" name="postID" />
+    <textarea
+      class="form-control mb-3"
+      rows="3"
+      name="usercomment"
+      placeholder="Join the discussion and leave a comment!"
+    ></textarea>
+    <button type="submit" class="btn buttonClass">
+      Add Comment
+    </button>
+  </form>
+</div>
+{{#each comment}}
+    
+
+{{!-- comments  --}}
+<div class="d-flex border-bottom bg-white p-3">
+  <!-- Parent comment-->
+  <div class="flex-shrink-0">
+    <img
+      class="rounded-circle"
+      src="https://dummyimage.com/50x50/ced4da/6c757d.jpg"
+      alt="..."
+    />
+  </div>
+  <div class="ms-3">
+    <div class="font-weight-bold ml-2">
+      
+      {{this.username}}
+    </div>
+    <p class="ml-2 mt-1">
+      {{this.usercomment}}
+    </p>
+    <a href="/deletecomment/{{this._id}}" class="btn btn-danger">
+      Delete
+    </a>
+    <a href="/updatecomment/{{this._id}}" class="btn btn-success">
+      Update
+    </a>
+  </div>
+</div>
+
+{{/each}}

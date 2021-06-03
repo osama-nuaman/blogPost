@@ -1,0 +1,50 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: #F6F6F6;
+}
+.mainColor{
+  color: #08D6A3;
+}
+h1{
+  color: #08D6A3;
+}
+p{
+  color: #888;
+  font-size: 15px;
+}
+
+label {
+  color: #000;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+input{
+  height: 60px !important ;
+  border: 1px solid #e8e8e8 !important;
+  width: 100% !important;
+  -webkit-border-radius: 5px !important;
+  -moz-border-radius: 5px !important;
+  border-radius: 5px !important;
+  padding-left: 20px !important;
+  margin-bottom: 20px !important;
+  color: #888;
+  font-size: 16px;
+}
+
+.buttonClass {
+  background-color:#08D6A3 !important;
+  border-radius: 0 !important;
+  color: #FFF !important;
+  font-weight: 500 !important;
+  height: 50px !important;
+  min-width: 100%;
+  line-height: 35px;
+}
+.buttonClass:hover{
+  background-color: #FFF !important;
+  border: 1px solid #08D6A3 !important;
+  color: #000 !important;
+  transition: .3s ease-in-out !important;
+  
+}

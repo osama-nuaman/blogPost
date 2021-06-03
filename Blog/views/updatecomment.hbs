@@ -1,0 +1,24 @@
+<h1 class="text-center ">{{title}}</h1>
+<p class="text-center mb-5">Use the below form to update new comment </p>
+
+<div class="addcomment bg-light mt-5">
+  <h3 class="mb-3 font-weight-bold">
+    Add Comment
+  </h3>
+  <!-- Comment form-->
+  <form class="mb-4" method="post" action="/updatecomment/{{comment.post_id}}">
+    <input type="text" name="username" value="{{comment.username}}" placeholder="Enter Your Name" />
+    <input type="hidden" value="{{comment._id}}" name="comentID" />
+    <textarea
+      type="text"
+      class="form-control mb-3"
+      rows="3"
+      name="usercomment"
+      placeholder="Join the discussion and leave a comment!"    
+    ></textarea>
+    <button type="submit" class="btn buttonClass">
+      Add Comment
+    </button>
+  </form>
+</div>
+

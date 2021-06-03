@@ -1,0 +1,39 @@
+<a
+  href="/create"
+  class="btn btn-light font-weight-bold border p-3 bg-white shadow rounded-0 mb-5"
+>
+  add post
+  <span class="d-inline-block ml-1 mainColor">
+    <i class="fas fa-blog"></i>
+  </span>
+</a>
+{{#each posts}}
+  <div class="row">
+    <div class="col-8 offset-2">
+      <div
+        class="card border-0 mb-4 rounded-0 text-left"
+        style="max-width: 100%;"
+      >
+        <div class="card-body mainColor">
+          <h5 class="card-title font-weight-bold">
+            {{this.title}}
+          </h5>
+          <p class="card-text">
+            {{this.content}}
+          </p>
+        </div>
+        <div class="card-footer bg-transparent p-3">
+          <a href="/read/{{this._id}}" class="btn btn-primary rounded-0">
+            read more
+          </a>
+          <a href="/update/{{this._id}}" class="btn btn-success rounded-0">
+            Edit
+          </a>
+          <a href="/delete/{{this._id}}" class="btn btn-danger rounded-0">
+            Delete
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+{{/each}}
